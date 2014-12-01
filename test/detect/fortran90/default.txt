@@ -2,7 +2,7 @@ program average
 
 ! Read in some numbers and take the average
 ! As written, if there are no data points, an average of zero is returned
-! While this may not be desired behavior, it keeps this example simple
+! While this may not be desired behaviour, it keeps this example simple
 
 implicit none
 

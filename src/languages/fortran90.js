@@ -24,11 +24,7 @@ function(hljs) {
     illegal: '</',
     contains: [
       hljs.QUOTE_STRING_MODE,
-      {
-        className: 'string',
-        begin: '\'\\\\?.', end: '\'',
-        illegal: '.'
-      },
+      hljs.C_NUMBER_MODE,
       {
         className: 'number',
         begin: '\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)'
@@ -36,7 +32,7 @@ function(hljs) {
       {
         className: 'comment',
         begin: /!/, end: /$/,
-        relevance: 10
+        contains: [hljs.PHRASAL_WORDS_MODE]
       },
       /*
       This seems to hang the browser:
@@ -49,7 +45,8 @@ function(hljs) {
           }
         ],
         relevance: 10
-      },*/
+      },
+      */
       {
         className: 'built_in',
         begin: /\.[Ee][Qq]/, end: /\./,
@@ -99,8 +96,7 @@ function(hljs) {
         className: 'built_in',
         begin: /\.[Ff][Aa][Ll][Ss][Ee]/, end: /\./,
         relevance: 10
-      },
-      hljs.C_NUMBER_MODE
+      }
     ]
   };
 }
