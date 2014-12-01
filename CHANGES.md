@@ -1,3 +1,12 @@
+## master (*UNRELEASED*)
+
+New languages:
+
+- *Fortran 90* by [Demitri Muna][]
+
+[Demitri Muna]: https://github.com/demitri
+
+
 ## Version 8.4
 
 We've got the new [demo page][]! The obvious new feature is the new look, but

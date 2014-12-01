@@ -1,5 +1,5 @@
 /*
-Language: FORTRAN 90
+Language: Fortran 90
 Author: Demitri Muna <demitri.muna@gmail.com>
 Description: Language file for FORTRAN 90
 */
@@ -14,9 +14,8 @@ function(hljs) {
       'allocatable allocate case contains cycle deallocate elsewhere exit ' +
       'include interface intent module namelist nullify only operator optional ' +
       'pointer private procedure public recursive result select sequence ' +
-      'target use while where',
-    built_in: 'integer real double precision complex logical character' + 
-      'type enddo'
+      'target use while where enddo',
+    built_in: 'integer real double precision complex logical character type'
   };
   return {
     aliases: ["f90", "F90"],
@@ -39,6 +38,18 @@ function(hljs) {
         begin: /!/, end: /$/,
         relevance: 10
       },
+      /*
+      This seems to hang the browser:
+      {
+        className: 'built_in',
+        begin: /\./, end: /\./,
+        contains: [
+          {
+            literal: 'eq ne lt gt ge le not and or true false'
+          }
+        ],
+        relevance: 10
+      },*/
       {
         className: 'built_in',
         begin: /\.[Ee][Qq]/, end: /\./,
@@ -89,18 +100,6 @@ function(hljs) {
         begin: /\.[Ff][Aa][Ll][Ss][Ee]/, end: /\./,
         relevance: 10
       },
-      /*
-      This seems to hang the browser.
-      {
-        className: 'built_in',
-        begin: /\./, end: /\./,
-        contains: [
-          {
-            literal: 'eq ne lt gt ge le not and or true false'
-          }
-        ],
-        relevance: 10
-      },*/
       hljs.C_NUMBER_MODE
     ]
   };

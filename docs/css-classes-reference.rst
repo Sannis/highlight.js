@@ -687,6 +687,15 @@ D ("d")
 * ``constant``:         true false null
 * ``built_in``:         built-in plain types (int, string etc.)
 
+Fortran 90 ("fortran90", "f90", "F90")
+--------------------------------------
+
+* ``keywords``:         keyword
+* ``comment``:          comment
+* ``string``:           string constant
+* ``number``:           number
+* ``built_in``:         built-in types and compare operations, like `.eq.`
+
 RenderMan RSL ("rsl")
 ---------------------
 

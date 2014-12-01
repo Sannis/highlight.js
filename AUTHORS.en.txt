@@ -152,3 +152,4 @@ Contributors:
 - Jon Evans <jon@craftyjon.com>
 - Brian Quistorff <bquistorff@gmail.com>
 - Jonathan Suever <suever@gmail.com>
+- Demitri Muna <demitri.muna@gmail.com>

@@ -1,0 +1,29 @@
+program average
+
+! Read in some numbers and take the average
+! As written, if there are no data points, an average of zero is returned
+! While this may not be desired behavior, it keeps this example simple
+
+implicit none
+
+real, dimension(:), allocatable :: points
+integer                         :: number_of_points
+real                            :: average_points=0., positive_average=0., negative_average=0.
+
+write (*,*) "Input number of points to average:"
+read  (*,*) number_of_points
+
+allocate (points(number_of_points))
+
+write (*,*) "Enter the points to average:"
+read  (*,*) points
+
+! Take the average by summing points and dividing by number_of_points
+if (number_of_points > 0) average_points = sum(points) / number_of_points
+
+deallocate (points)
+
+! Print result to terminal
+write (*,'(a,g12.4)') 'Average = ', average_points
+
+end program average
